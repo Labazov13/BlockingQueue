@@ -20,6 +20,7 @@ public class BlockingQueue<T> {
             notifyAll();
         }
         queue.add(item);
+        notifyAll();
     }
 
     public synchronized T dequeue() throws InterruptedException {
